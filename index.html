@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="start-screen">
+        <h1>Superhero Quiz Game</h1>
+        <p class="instructions">Welcome to the ultimate superhero quiz! You will receive 3 hints to guess the superhero. As you progress, questions will get harder. Enter your name to begin!</p>
+        <input type="text" id="player-name" placeholder="Enter your name" />
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <div class="container hidden" id="quiz-container">
+        <h2 id="player-greeting"></h2>
+        <div id="hints">
+            <p id="hint1" class="hint"></p>
+            <p id="hint2" class="hint"></p>
+            <p id="hint3" class="hint"></p>
+        </div>
+        <div id="options" class="options-container"></div>
+        <p id="result" class="result-message"></p>
+        <button id="next-btn" onclick="nextQuestion()" class="hidden next-button">Next Question</button>
+    </div>
+
+    <div class="container hidden" id="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
